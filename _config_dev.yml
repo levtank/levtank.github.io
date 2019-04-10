@@ -1,0 +1,15 @@
+# Site Settings
+title: Lev Tankelevitch
+email: lev.tankelevitch@gmail.com
+description: >
+  Lev's archive of work.
+baseurl: ""
+url: "http://localhost:4444"
+twitter_username: lev_tank
+github_username:  lev_tank
+# Build Settings
+sass:
+  sass_dir: _sass
+include: ['_pages']
+kramdown:
+  input: GFM

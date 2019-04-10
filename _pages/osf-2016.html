@@ -1,0 +1,164 @@
+---
+layout: default
+title: Oxfordshire Science Festival 2016
+permalink: /osf-2016/
+---
+
+<div class="project-content"> 
+
+<div class="project-header">
+	<h1 class="project-title"> Oxfordshire Science Festival 2016 </h1>
+	<h1 class="project-place">Oxford Town Hall, 2016 </h1>
+</div>
+
+<img src="/images/osf_gif.gif">
+
+ <p> 
+ 	
+	In Spring 2016, I collaborated with Cristiana Vagnoni to develop a stall of neuroscience activities for the Oxfordshire Science Festival (OSF). It was part of a larger neuroscience-themed area entitled “Get to Know Your Brain”, with scientists from different neuroscience-related university departments coming together to present their activities. The stall was presented at the OSF opening weekend on June 25-26, 2016.
+ </p>
+
+<h1> Aims </h1>
+
+ <p>
+ 	After the success of our previous stall, <a href="/brain-power/" target="_blank">Brain Power!</a>, we were encouraged to see visitors eager to learn about basic neuroscience principles and research methods. Here, we further explored these themes, using different activities. People's engagement hinged on the interactivity of our demos, so we found new ways to get interactive!
+ </p>
+
+<p>
+	<ol>
+		Our stall had three aims:
+		<li>
+			explore the idea of <i>sensory coding</i>: that information in the external world is captured by the senses, and transformed into a neural code during perception 
+		</li>
+		<li>
+			make accessible the common technique of <i>electroencephalography (EEG)</i> – what it measures, what the data look like, and how sensory input changes the EEG signal (i.e., the brain) in real time
+		</li>
+		<li>
+			do this in a hands-on way, to provide an intuition about the concepts, and to engage visitors of all ages
+		</li>
+	</ol>
+</p>
+
+<h1> Activities </h1>
+
+<p>
+	
+	<ol>
+		Our stall had two main activities:
+		<li>The all-seeing eyeball (sensory coding demo)</li>
+		<li>The alpha selfie (EEG demo) </li>
+	</ol>
+</p>
+
+<h2> The all-seeing eyeball </h2>
+
+<p>
+	We wanted to put visitors in the middle of the action of the sensory circuit, laying bare its key components. The most intuitive system to use (and to study) is vision, so we built a simplified eyeball for them to play with.
+</p>
+	<img src="/images/osf_2-comp.jpg">
+
+<p>
+	Our eyeball was made of two hollow, styrofoam half-spheres. On the inside of one of the spheres was our homemade "retina" – the layer of neurons within the eyeball that captures visual information from the environment, and sends it on to the brain. Our retina was made of a grid of 9 photocells (cheap light-sensitive electrical resistors). The photocells were embedded into the “retinal” surface of our sphere, and were connected in the back to an Arduino microcontroller, which was itself connected to a laptop + monitor setup (the “brain” of our perceptual circuit).
+</p>
+
+<p>
+	[ Side note: we also built a touch sensory circuit. It was a patch of skin, made of latex, with an embedded pressure sensor. It unfortunately died within the first hour due to a probable short circuit :( ]
+</p>
+
+<img src="/images/osf_1-comp.jpg">
+
+
+<p>
+	The photocells register the local light levels and send them, via the Arduino, to the laptop. On the laptop, I had coded in Python an interactive visualisation of a neural network. This visualisation was the “visual brain” of our perceptual circuit. It constantly received input from the photocells in our eyeball.
+</p>
+
+<p>
+	The activity of neurons in our visualisation was represented by flashes of orange glow. The neurons were always active at a low, baseline frequency. This mimicked the observed activity of neurons at rest (i.e., without any new input). It also was a neat way to capture visitors' attention when they walked by.
+</p>
+
+<p>
+	Visitors were able to take a mini flashlight, and shine it at a photocell of their choosing, effectively providing light stimulation to a part of the eye's retina. If the light levels in a given photocell exceeded a threshold, a group of neurons in the visualisation would emit a burst of activity.
+</p>
+
+<iframe src="https://player.vimeo.com/video/180224468" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+<h1 class="caption">(photocell stimulation in the top-left corner begins at 10 sec)</h1>
+
+<p>
+	With this interactive demo and visualisation we were able to discuss with visitors how sensory information may be represented by the brain. As we prodded their curiosity with questions, they had a chance to test out ideas for themselves.
+</p>
+
+<img src="/images/osf_3-comp.jpg">
+
+<p><i>What happens when you shine light onto a photocell? What about onto a photocell next to it? </i></p>
+
+<p>
+	Sensory codes in the brain are organised into orderly maps. In the case of vision, these maps are intuitively spatial. Neighbouring photocells in the eye correspond to neighbouring groups of neurons in the brain – together, they form an image of the world around us, which is constantly updated as we move our eyes.
+</p>
+
+<p><i>What happens when you continously shine light onto a photocell?</i></p>
+
+<p>
+	The brain loves new information. Stimulating a photocell for a long time did not make the corresponding neurons light up continuously. Rather, they would settle into a lower activity rate, similar to real neurons, indicating that they have effectively gotten “bored”.
+</p>
+
+<p><i>What happens when you don't shine any light?</i></p>
+
+<p>
+The brain is always active at some level, even when it is not getting any new input. Similarly, the neural network always showed some activity. As they finished playing with the demo, we asked them how it would be possible to study the visual system in the human brain – this led them to our EEG demo.
+</p>
+
+<h2> The alpha selfie </h2>
+
+	<p>
+		For this demo we used a small, portable EEG kit from <a href="https://openbci.com/" target="_blank">OpenBCI</a>. Visitors were welcome to see their own brain respond to visual input. We applied one surface electrode on the back of their heads (near the visual brain), and one electrode on each earlobe, as a reference. As we started up the software, visitors could observe their own brainwaves on the display monitor.
+	</p>
+
+	<img src="/images/openbci_kit-comp.png">
+	<h1 class="caption">Image via <a href="https://openbci.com/index.php/gettingstarted" target="_blank">OpenBCI</a></h1>
+	
+
+	<p>
+		As visitors were getting set up, we explained that neural activity is naturally organised into rhythmic patterns, or "brainwaves". One very prominent pattern often arising from the visual brain is called <i>alpha</i>. Alpha is simply a pattern of neural activity reoccurring at a rate of approximately ten times per second (10 Hz). It is especially strong when the visual brain is not getting very much visual input from the external world: when people "zone out" and daydream, or when they close their eyes.
+	</p>
+
+	<img src="/images/osf_4-comp.png">
+	<h1 class="caption">Photo courtesy of Kate Watkins</h1>
+
+	<p>
+		We had visitors test this idea in real time. We asked them to close their eyes for a few seconds, and we observed their brain activity on the monitor (since their eyes were closed, we saved screenshots for them to see). Almost instantaneously, there was a large increase in alpha activity. As soon as visitors opened their eyes, it was gone. We could do this multiple times with the same person. Their friends and family, and any other visitors, were surprised to see this so reliably. Once we showed the saved images to the visitors to compare eyes open and closed, they too were very impressed!
+	</p>
+
+	<img src="/images/osf_6-comp.png">
+	<h1 class="caption">Visual brain activity during eyes open (left panel) and eyes closed (right panel)</h1>
+
+	<p>
+		After the demo, visitors were usually very curious about what it all means and what it's used for. We used the opportunity to explain how this kind of activity can be used to track and study the focus of attention, and other applications in research.
+	</p>
+
+	<p>
+		Visitors also noticed that every time they moved or blinked, the signal became quite noisy. This was a great chance to mention how <i>invasive animal recordings</i> - which are comparatively noise-free - contribute to research, and how vital it is to have both human and animal-based techniques to address research questions.
+</p>
+
+<p>
+	As a small parting souvenir, we digitally framed the saved image of their alpha activity as an “alpha selfie”, and they could take a picture with their phones to show others (we would have loved to have a photo printer available to us, to let visitors take something tangible home).
+</p>
+
+<img src="/images/osf_5-comp.jpg">
+
+
+<h1> Visitor feedback </h1>
+
+<p>
+	The festival organisers did not want stalls to collect individual feedback so as not to inundate visitors with forms (understandable). However, we got some insight into our impact by the amount of interesting conversations we were able to have throughout our two days. For example, one person wondered how the visual snow she sees would affect her alpha activity - a great question! Another person shared that although they are in the art field with no background in science, their child is obsessed with science, and these festivals are the highlight of their days.
+</p>
+
+<blockquote>
+	
+@OxSciFest - had an amazing time, great atmosphere, loved the experiments and seeing brain waves! pic.twitter.com/rbyjl8ktQP
+— Lucy Crittenden (@LooseyC1) June 25, 2016
+</blockquote>
+
+<img>
+
+
+</div>

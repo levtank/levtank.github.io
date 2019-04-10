@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+
+<html lang="{{ page.lang | default: site.lang | default: "en" }}">
+
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="x-ua-compatible" content="ie=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+
+		<title>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</title>
+
+		<link rel="stylesheet" href="{{ "/css/main.css" | prepend: site.baseurl }}">
+		<link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
+		<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,700,800,600' rel='stylesheet' type='text/css'>
+		<link href='https://fonts.googleapis.com/css?family=Muli:400,300' rel='stylesheet' type='text/css'>
+		<link href="https://fonts.googleapis.com/css?family=Roboto+Mono|Roboto+Slab:300|Roboto:200" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Share+Tech+Mono" rel="stylesheet"> 
+	</head> 
+
+
+  <body>
+
+<!--   	<div class="site-wrapper2">
+ -->
+	<div class="site-wrapper">
+
+		<div class="header">
+		
+		<div class="logo">
+		<div class="logo-img"><img src="/images/logo_small-01.png" alt="The Stokes Lab"></div>
+		
+		<a href="{{ site.baseurl }}"><div class="site-title">{{ site.title }}</div></a>
+<!-- 			<div class="container">
+ -->	</div>
+		<div class="menu">
+			{% for page in site.pages %} {% if page.title %}
+			<div class="menu-item-wrapper"><a href="{{ page.url | prepend: site.baseurl }}"><div class="menu-item">{{ page.title }}</div></a></div>
+			{% endif %} {% endfor %}
+		</div>
+
+<!-- 			</div>
+ -->		
+		</div>
+
+		<div class="content">
+			{{ content }}
+		</div>
+
+		
+
+	</div>
+<!-- </div>
+ -->
+	<div class="footer">
+			&copy; Stokes Lab {{ 'now' | date: "%Y" }} | University of Oxford | website built using <a target="_blank" href="https://jekyllrb.com/">Jekyll</a> and <a target="_blank" href="https://pages.github.com/">GitHub Pages</a> 
+	</div>
+</body>
+
+
+</html>

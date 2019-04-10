@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+
+<html lang="{{ page.lang | default: site.lang | default: "en" }}">
+
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="x-ua-compatible" content="ie=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+
+		<title>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</title>
+
+		<link rel="stylesheet" href="{{ "/css/main.css" | prepend: site.baseurl }}">
+		<link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
+		<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,700,800,600' rel='stylesheet' type='text/css'>
+		<link href='https://fonts.googleapis.com/css?family=Muli:400,300' rel='stylesheet' type='text/css'>
+		<link href="https://fonts.googleapis.com/css?family=Roboto+Mono|Roboto+Slab:300|Roboto:200" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Share+Tech+Mono" rel="stylesheet"> 
+		 <link href="https://fonts.googleapis.com/css?family=Inconsolata" rel="stylesheet"> 
+
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+	</head> 
+
+
+  <body>
+	<a name="about"></a>
+
+	<div class="site-wrapper">
+
+		
+		<a href="{{ site.url }}"><div class="site-title">{{ site.title }}</div></a>
+
+		<div class="menu">
+
+
+			<!-- {% for page in site.pages %} {% if page.title %}
+			<div class="menu-item-wrapper"><a href="{{ page.url | prepend: site.baseurl }}"><div class="menu-item">{{ page.title }}</div></a></div>
+			{% endif %} {% endfor %} -->
+
+			<!-- <div class="menu-item-wrapper"><a href=""><div class="menu-item">about</div></a></div>
+			<div class="menu-item-wrapper"><a href=""><div class="menu-item">policy research</div></a></div>
+			<div class="menu-item-wrapper"><a href=""><div class="menu-item">science communication</div></a></div>
+ -->
+			<!-- <div class="menu-item-wrapper first-menu"><a href="{{ site.url }}/#about"><div class="menu-item">about</div></a></div> / -->
+			<div class="menu-item-wrapper first-menu"><a href="{{ site.url }}/#policy-research"><div class="menu-item">policy research</div></a></div> /
+			<div class="menu-item-wrapper"><a href="{{ site.url }}/#science-communication"><div class="menu-item">science communication</div></a></div> /
+			<div class="menu-item-wrapper"><a href="/contact/"><div class="menu-item"><i class="fas fa-envelope"></i></div></a></div> / 
+			<div class="menu-item-wrapper"><a href="https://twitter.com/lev_tank" target="_blank"><div class="menu-item"><i class="fab fa-twitter-square"></i></div></a></div> / 
+			<div class="menu-item-wrapper last-menu"><a href="https://www.linkedin.com/in/lev-tankelevitch/" target="_blank"><div class="menu-item"><i class="fab fa-linkedin"></i></div></a></div>
+
+			
+
+			<!-- <a href=""><div class="menu-item2">about</div></a> /
+			<a href=""><div class="menu-item2">policy research</div></a> /
+			<a href=""><div class="menu-item2">science communication</div></a>
+ -->
+		</div>
+
+
+		<div class="content">
+			{{ content }}
+		</div>
+
+		
+
+	</div>
+
+	<div class="footer">
+		<div class="footer-content">
+			&copy; {{ 'now' | date: "%Y" }} Lev Tankelevitch. Built using <a target="_blank" href="https://jekyllrb.com/">Jekyll</a> and <a target="_blank" href="https://pages.github.com/">GitHub Pages</a>. 
+		</div>
+	</div>
+</body>
+
+
+</html>
