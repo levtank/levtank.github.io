@@ -99,7 +99,7 @@ $on-large:         $on-laptop !default;
 
 
 @media (hover: none) {
-    a:hover { color: inherit; }
+    a:hover { color: none; }
 }
 
 /**,
@@ -265,6 +265,10 @@ body {
 
 .menu-item:hover {
     color: $link-hover-color;
+
+    @media (hover: none) {
+    a:hover { color: none; }
+}
 }
 
 
