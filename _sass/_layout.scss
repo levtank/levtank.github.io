@@ -98,7 +98,9 @@ $on-medium:        $on-palm !default;
 $on-large:         $on-laptop !default;
 
 
-
+@media (hover: none) {
+    a:hover { color: inherit; }
+}
 
 /**,
 *::before,
@@ -200,8 +202,8 @@ body {
 }
 
 .menu {
-	outline: 1px solid red; 
-
+/*	outline: 1px solid red; 
+*/
 	width: 100%;
 	margin-top: $menu-top-margin-small;
 	margin-left: auto;
