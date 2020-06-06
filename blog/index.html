@@ -4,5 +4,5 @@ layout: default
 
 {% for post in site.posts %}
 		<time>{{ post.date | date: "%b %-d, %Y" }}</time>
-		{{ post }}
+		{{ post.content }}
 {% endfor %}
