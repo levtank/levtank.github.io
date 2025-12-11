@@ -1,0 +1,8 @@
+<svg width="300" height="120" xmlns="http://www.w3.org/2000/svg">
+  <rect width="300" height="120" fill="#e3f2fd"/>
+  <circle cx="150" cy="60" r="25" fill="#1976d2" opacity="0.8"/>
+  <rect x="130" y="45" width="40" height="8" fill="#1976d2" opacity="0.6"/>
+  <rect x="135" y="57" width="30" height="6" fill="#1976d2" opacity="0.6"/>
+  <rect x="140" y="67" width="20" height="6" fill="#1976d2" opacity="0.6"/>
+  <text x="150" y="95" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#1976d2">AI Research</text>
+</svg>

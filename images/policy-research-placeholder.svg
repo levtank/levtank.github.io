@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" style="background: linear-gradient(135deg, #667eea, #764ba2);">
+  <rect width="100%" height="100%" fill="url(#policyGrad)"/>
+  <defs>
+    <linearGradient id="policyGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#667eea;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#764ba2;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Government/Policy building icon -->
+  <g transform="translate(200,150)">
+    <!-- Building columns -->
+    <rect x="-80" y="-40" width="20" height="80" fill="white" opacity="0.9"/>
+    <rect x="-40" y="-40" width="20" height="80" fill="white" opacity="0.9"/>
+    <rect x="0" y="-40" width="20" height="80" fill="white" opacity="0.9"/>
+    <rect x="40" y="-40" width="20" height="80" fill="white" opacity="0.9"/>
+    
+    <!-- Building base -->
+    <rect x="-90" y="40" width="180" height="15" fill="white" opacity="0.9"/>
+    
+    <!-- Building roof/triangle -->
+    <polygon points="-100,-50 0,-80 100,-50" fill="white" opacity="0.9"/>
+    
+    <!-- Document pages floating -->
+    <rect x="-120" y="-20" width="25" height="35" fill="white" opacity="0.8" rx="2"/>
+    <rect x="110" y="-30" width="25" height="35" fill="white" opacity="0.8" rx="2"/>
+    <rect x="-130" y="10" width="25" height="35" fill="white" opacity="0.8" rx="2"/>
+    
+    <!-- Lines on documents -->
+    <line x1="-115" y1="-10" x2="-100" y2="-10" stroke="#764ba2" stroke-width="1"/>
+    <line x1="-115" y1="-5" x2="-100" y2="-5" stroke="#764ba2" stroke-width="1"/>
+    <line x1="-115" y1="0" x2="-100" y2="0" stroke="#764ba2" stroke-width="1"/>
+  </g>
+  
+  <!-- Category label -->
+  <text x="200" y="260" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="24" font-weight="bold">
+    Policy Research
+  </text>
+</svg>

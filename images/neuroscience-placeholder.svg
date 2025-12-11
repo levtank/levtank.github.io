@@ -1,0 +1,8 @@
+<svg width="300" height="120" xmlns="http://www.w3.org/2000/svg">
+  <rect width="300" height="120" fill="#fce4ec"/>
+  <circle cx="150" cy="60" r="30" fill="#c2185b" opacity="0.3"/>
+  <path d="M130 50 Q150 30 170 50 Q150 70 130 50" fill="#c2185b" opacity="0.8"/>
+  <circle cx="140" cy="55" r="3" fill="#c2185b"/>
+  <circle cx="160" cy="55" r="3" fill="#c2185b"/>
+  <text x="150" y="95" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#c2185b">Neuroscience</text>
+</svg>
