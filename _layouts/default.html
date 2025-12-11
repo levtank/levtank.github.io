@@ -13,25 +13,110 @@
 		<link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
 		<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,700,800,600' rel='stylesheet' type='text/css'>
 		<link href='https://fonts.googleapis.com/css?family=Muli:400,300' rel='stylesheet' type='text/css'>
-		<link href="https://fonts.googleapis.com/css?family=Roboto+Mono|Roboto+Slab:300|Roboto:700" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Roboto+Mono|Roboto+Slab:300|Roboto:100,300,400,700" rel="stylesheet">
 		<link href="https://fonts.googleapis.com/css?family=Share+Tech+Mono" rel="stylesheet"> 
 		<link href="https://fonts.googleapis.com/css?family=Inconsolata" rel="stylesheet"> 
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Darumadrop+One&display=swap" rel="stylesheet">
 		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
 	</head> 
 
 	<body>
- 		<div class="header"><a href="{{ site.url }}"><div class="site-title">{{ site.title }}</div></a></div>
+		<div class="page-container">
+			<!-- Mobile Header -->
+			<div class="mobile-header">
+				<!--<div class="mobile-header-photo">
+					<img src="{{ site.baseurl }}/images/sketch_01.png" alt="Lev Tankelevitch" />
+				</div>-->
+				<div class="mobile-title">
+					<a href="{{ site.url }}">Lev Tankelevitch</a>
+				</div>
+				<button class="hamburger-menu" aria-label="Toggle navigation">
+					<span></span>
+					<span></span>
+					<span></span>
+				</button>
+			</div>
 
-		<div class="content-wrapper">
-				{{ content }}
-		</div>
+			<!-- Left Sidebar -->
+			<div class="sidebar">
+				<div class="sidebar-photo">
+					<img src="{{ site.baseurl }}/images/sketch_01.png" alt="Lev Tankelevitch" />
+				</div>
+				<div class="sidebar-title">
+					<a href="{{ site.url }}">Lev Tankelevitch</a>
+				</div>
+				<div class="sidebar-header">
+					<div class="mobile-sidebar-title">
+						<a href="{{ site.url }}">Lev Tankelevitch</a>
+					</div>
+					<button class="close-menu" aria-label="Close navigation">
+						<span></span>
+						<span></span>
+					</button>
+				</div>
+				<nav class="sidebar-nav">
+					<a href="/#genai">Generative AI's impact on people and work</a>
+					<a href="/#collab-hci">AI-assisted collaboration</a>
+					<a href="/#remote-collab">Remote & hybrid collaboration</a>
+					<a href="/#applied-behavioural-science">Behavioural science in health and education</a>
+					<a href="/#policy-research">Policy research</a>
+					<a href="/#science-communication">Science communication</a>
+					<a href="/#academic-neuroscience-research">Neuroscience research</a>
+				</nav>
+				<div class="sidebar-contact">
+					<p>Reach me: <a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#108;&#101;&#118;&#46;&#116;&#97;&#110;&#107;&#101;&#108;&#101;&#118;&#105;&#116;&#99;&#104;&#64;&#103;&#109;&#97;&#105;&#108;&#46;&#99;&#111;&#109;">&#108;&#101;&#118;&#46;&#116;&#97;&#110;&#107;&#101;&#108;&#101;&#118;&#105;&#116;&#99;&#104;&#64;&#103;&#109;&#97;&#105;&#108;&#46;&#99;&#111;&#109;</a></p>
+					<p><a href="https://www.linkedin.com/in/lev-tankelevitch/" target="_blank">LinkedIn</a>, <a href="https://twitter.com/lev_tank" target="_blank">Twitter/X</a>, <a href="https://bsky.app/profile/levlevlev.bsky.social" target="_blank">Bluesky</a></p>
 
-		<div class="footer">
-			<div class="footer-content">
-				&copy; {{ 'now' | date: "%Y" }} Lev Tankelevitch. Built using <a target="_blank" href="https://jekyllrb.com/">Jekyll</a> and <a target="_blank" href="https://pages.github.com/">GitHub Pages</a>. 
+				</div>
+			</div>
+
+			<!-- Main Content Area -->
+			<div class="main-content">
+				<div class="content-wrapper">
+						{{ content }}
+				</div>
+
+				<div class="footer">
+					<div class="footer-content">
+						&copy; {{ 'now' | date: "%Y" }} Lev Tankelevitch. Built using <a target="_blank" href="https://jekyllrb.com/">Jekyll</a> and <a target="_blank" href="https://pages.github.com/">GitHub Pages</a>. 
+					</div>
+				</div>
 			</div>
 		</div>
-	</body>
 
+		<script>
+			document.addEventListener('DOMContentLoaded', function() {
+				const hamburger = document.querySelector('.hamburger-menu');
+				const closeMenu = document.querySelector('.close-menu');
+				const sidebar = document.querySelector('.sidebar');
+				
+				function openMenu() {
+					sidebar.classList.add('sidebar-open');
+				}
+				
+				function closeMenuFunc() {
+					sidebar.classList.remove('sidebar-open');
+				}
+				
+				hamburger.addEventListener('click', openMenu);
+				closeMenu.addEventListener('click', closeMenuFunc);
+
+				// Close sidebar when clicking outside
+				document.addEventListener('click', function(event) {
+					if (!sidebar.contains(event.target) && !hamburger.contains(event.target)) {
+						closeMenuFunc();
+					}
+				});
+
+				// Close sidebar when clicking a navigation link
+				const navLinks = document.querySelectorAll('.sidebar-nav a');
+				navLinks.forEach(link => {
+					link.addEventListener('click', closeMenuFunc);
+				});
+			});
+		</script>
+	</body>
 
 </html>

@@ -1,0 +1,8 @@
+<svg width="300" height="120" xmlns="http://www.w3.org/2000/svg">
+  <rect width="300" height="120" fill="#e8f5e8"/>
+  <path d="M140 45 L160 45 L150 25 Z" fill="#2e7d32" opacity="0.8"/>
+  <rect x="130" y="45" width="40" height="30" fill="#2e7d32" opacity="0.6"/>
+  <circle cx="110" cy="75" r="8" fill="#2e7d32" opacity="0.8"/>
+  <circle cx="190" cy="75" r="8" fill="#2e7d32" opacity="0.8"/>
+  <text x="150" y="95" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#2e7d32">Health & Behavior</text>
+</svg>
