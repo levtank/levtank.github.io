@@ -244,7 +244,7 @@ body {
 
 .main-content {
 	flex: 1;
-	margin-left: 250px; // Reduced from 290px to decrease spacing further
+	margin-left: 300px; // Must clear the 280px fixed sidebar to avoid overlap
 	
 	@media screen and (max-width: $on-large) {
 		margin-left: 0;
