@@ -264,6 +264,7 @@ body {
 
 	@media screen and (min-width: $on-large) {
 		max-width: 1000px;
+		padding: 0 $spacing-unit / 2;
 	}
 }
 
