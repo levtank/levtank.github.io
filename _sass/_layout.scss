@@ -263,8 +263,7 @@ body {
 	-webkit-font-smoothing: antialiased;
 
 	@media screen and (min-width: $on-large) {
-		max-width: -webkit-calc(#{$content-width} - (#{$spacing-unit} * 2));
-		max-width:         calc(#{$content-width} - (#{$spacing-unit} * 2));
+		max-width: 1000px;
 	}
 }
 
